@@ -1,0 +1,23 @@
+{
+  "name": "pwuas",
+  "version": "1.0.0",
+  "description": "uas pproject",
+  "main": "app.js",
+  "scripts": {
+    "dev": "echo \"nodemon app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "nur mikael",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.3",
+    "nodemon": "^2.0.20"
+  }
+}
