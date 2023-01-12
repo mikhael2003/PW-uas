@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-const cors = require('cors')
 require('dotenv/config')
 mongoose.set('strictQuery', false)
 
@@ -12,7 +11,6 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
-app.use(cors())
 
 // (7) import routes
 const MakananRoutes = require('./routes/listMakanan')
@@ -23,10 +21,9 @@ app.use('/listMakanan', MakananRoutes)
 app.use('/listPembeli', PembeliRoutes)
 
 // (3) koneksi ke database mongodb
-mongoose.connect(process.env.DB_CONNECTION, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true, useUnifiedTopology: true
 })
+
 let db = mongoose.connection
 
 // handle error
