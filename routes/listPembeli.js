@@ -8,8 +8,8 @@ const router = express.Router()
 router.post('/', async (req, res) => {
     // tampung input mahasiswa 
     const listPembeliPost = new ListPembeli({
-        namaBunga: req.body.namaBunga,
-        nomor: req.body.nomor
+        nama: req.body.nama,
+        alamat: req.body.alamat
     })
 
     try {
@@ -41,8 +41,8 @@ router.get('/', async (req, res) => {
 router.put('/:listPembeliId', async (req, res) => {
     // tampung input mahasiswa 
     const data = {
-        namaBunga: req.body.namaBunga,
-        nomor: req.body.nomor
+        nama: req.body.nama,
+        alamat: req.body.alamat
     }
 
     try {

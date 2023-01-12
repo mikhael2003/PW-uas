@@ -3,11 +3,11 @@ const mongoose = require('mongoose')
 
 const ListMakananSchema = mongoose.Schema({
     // Buat Schema data
-    nama: {
+    nama_makanan: {
         type: String,
         required: true
     },
-    alamat: {
+    deskripsi_makanan: {
         type: String,
         required: true
     },

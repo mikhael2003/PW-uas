@@ -3,11 +3,11 @@ const mongoose = require('mongoose')
 
 const ListPembeliSchema = mongoose.Schema({
     // Buat Schema data
-    nomor: {
+    nama: {
         type: String,
         required: true
     },
-    namaBunga: {
+    alamat: {
         type: String,
         required: true
     },

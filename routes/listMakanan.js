@@ -6,10 +6,10 @@ const router = express.Router()
 
 // Create 
 router.post('/', async (req, res) => {
-    // tampung input mahasiswa 
+    // tampung input makanan 
     const listMakananPost = new ListMakanan({
-        nama: req.body.nama,
-        alamat: req.body.alamat
+        nama_makanan: req.body.nama_makanan,
+        deskripsi_makanan: req.body.deskripsi_makanan
     })
 
     try {
@@ -41,8 +41,8 @@ router.get('/', async (req, res) => {
 router.put('/:listMakananId', async (req, res) => {
     // tampung input mahasiswa 
     const data = {
-        nama: req.body.nama,
-        alamat: req.body.alamat
+        nama_makanan: req.body.nama_makanan,
+        deskripsi_makanan: req.body.deskripsi_makanan
     }
 
     try {
